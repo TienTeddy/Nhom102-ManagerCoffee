@@ -6,27 +6,87 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Content/pop.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/pop.js"></script>
+    <link href="~/Content/dropdown.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="profile-1">
+                    <img class="profile-2 btn" src="~/assets/img/avt-nam.jpg"/>
+                </div>&nbsp;
+                <div style="margin-top:33px;">
+                    <h4>Name: Le Van Tien</h4>
+                    <h5>#Slogan: $1000 USD</h5>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+            <div class="col-sm-7">
+                <div class="title btn" style="background-color:indianred">KHO</div>
+                <div class="title btn" style="background-color:lightseagreen">LỊCH SỬ</div>
+                <div class="title btn" style="background-color:goldenrod">TABLE</div>
+
+            </div>
+        </div>
+
+        <div class="row" style="margin-top:3%">
+            <div class="col-md-5 content-1">
+                <!--<span class="dropdown-el">
+                    <input type="radio" name="sortType" value="Relevance" checked="checked" id="sort-relevance"><label for="sort-relevance">Relevance</label>
+                    <input type="radio" name="sortType" value="Popularity" id="sort-best"><label for="sort-best">Product Popularity</label>
+                    <input type="radio" name="sortType" value="PriceIncreasing" id="sort-low"><label for="sort-low">Price Low to High</label>
+                    <input type="radio" name="sortType" value="PriceDecreasing" id="sort-high"><label for="sort-high">Price High to Low</label>
+                    <input type="radio" name="sortType" value="ProductBrand" id="sort-brand"><label for="sort-brand">Product Brand</label>
+                    <input type="radio" name="sortType" value="ProductName" id="sort-name"><label for="sort-name">Product Name</label>
+                </span>-->
+                <div class="row">
+                    <div class="col-md-4 btn-item btn btn-info">COFFEE</div>
+                    <div class="col-md-4 btn-item btn btn-info">CAPUCHINO</div>
+                    <div class="col-md-4 btn-item btn btn-info">NƯỚC ÉP</div>
+                </div>
+                <table class="table table-hover">
+                    <tr>
+                        <td><strong>TÊN</strong></td>
+                        <td><strong>SỐ LƯỢNG</strong></td>
+                        <td><strong>GIÁ</strong></td>
+                        <td><strong>THÊM BÀN</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Coffee new</td>
+                        <td>20</td>
+                        <td>20.000 VNĐ</td>
+                        <td>...</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-7 content-2">
+                <div class="table_ btn" id="table-1">1</div>
+                <div class="table_ btn" id="table-2">2</div>
+                <div class="table_ btn" id="table-3">3</div>
+                <div class="table_ btn" id="table-4">4</div>
+                <div class="table_ btn" id="table-5">5</div>
+                <div class="table_ btn" id="table-6">6</div>
+                <div class="table_ btn" id="table-7">7</div>
+                <div class="table_ btn" id="table-8">8</div>
+                <div class="table_ btn" id="table-9">9</div>
+                <div class="table_ btn" id="table-10">10</div>
+                <div class="table_ btn" id="table-11">11</div>
+                <div class="table_ btn" id="table-12">12</div>
+                <div class="table_ btn" id="table-13">13</div>
+                <div class="table_ btn" id="table-14">14</div>
+                <div class="table_ btn" id="table-15">15</div>
+                <div class="table_ btn" id="table-16">16</div>
+                <div class="table_ btn" id="table-17">17</div>
+                <div class="table_ btn" id="table-18">18</div>
+                <div class="table_ btn" id="table-19">19</div>
+                <div class="table_ btn" id="table-10"><i style="font-size:50px" class="fa">&#xf196;</i></div>
             </div>
         </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -35,6 +95,7 @@
         </footer>
     </div>
 
+    <script src="~/Scripts/dropdown.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
