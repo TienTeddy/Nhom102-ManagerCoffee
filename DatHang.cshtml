@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "DatHang";
+}
+
+<!-- Table-DonHang -->
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+<div class="tab-pane bootdey" id="cart">
+    <div class="panel panel-default panel-order">
+        <div class="panel-heading">
+            <strong>order history</strong>
+            <div class="btn-group pull-right">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">filter history <i class="fa fa-filter"></i></button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">approved orders</a></li>
+                        <li><a href="#">pending orders</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="load-hoadon">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-1"><img src="~/Areas/Admin/assets/img/avt-nam.jpg" class="media-object img-thumbnail" /></div>
+                    <div class="col-md-11">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="pull-right"><label class="label label-danger">rejected</label></div>
+                                <span><strong>order <p id="hoadon-id_donhang"></p></strong></span> <span class="label label-info">group name</span><br />
+                                quantity : <p id="hoadon-soluong">2</p>,  cost: <p id="hoadon-dongia">323.13</p>VNĐ <br />
+                                <a data-placement="top" class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="view"></a>
+                                <a data-placement="top" class="btn btn-danger btn-xs glyphicon glyphicon-trash" href="#" title="danger"></a>
+                                <!--<a data-placement="top" class="btn btn-info btn-xs glyphicon glyphicon-usd" href="#" title="danger"></a>-->
+                            </div>
+                            <div class="col-md-12">order made on: <p id="hoadon-thoigian"></p> by <a href="#">@ViewBag.taikhoan </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <select class="custom-select" id="Ma_Coupon" onchange="ChangeMoney_Coupon(this)">
+                <option selected>Coupon</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <button class="btn btn-success">Thanh Toán</button>
+            <div class="text-lg-right" style="display:inline-block;float:right"><h3><strong id="sum-hoadon">Tổng: &nbsp;</strong></h3></div>
+        </div>
+    </div>
+</div>
+<!-- Table-DonHang -->
